@@ -26,12 +26,16 @@ class LinkedList{
     toString(){
         let current = this.head;
         let string = " ";
+        let count = 0;
+        let arr = [];
 
         while(current != null){
+            arr[count] = current.head;
             string += current.head;
             current = current.prox;
+            count++;
         }
-        return string;
+        return arr;
     }
     print(){
         console.log(this.toString());
